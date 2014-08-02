@@ -78,7 +78,15 @@ body {
 }
 
 .video-player {
-  background-color: rgb(36, 35, 36);
+  .container-fluid {
+    background-color: rgb(36, 35, 36);
+  }
+
+  &.stuck {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
   .video-wrapper {
     width: 800px;
