@@ -1,3 +1,5 @@
+@video-width: 480px;
+
 @import 'packages/less-bootstrap-3/lib/less/bootstrap.import.less';
 
 @font-face {
@@ -89,13 +91,12 @@ body {
   }
 
   .video-wrapper {
-    width: 560px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
     .video-js {
       margin: 0 0;
+      float: right;
+    }
+    .video-poster {
+      float: left;
     }
   }
 }
@@ -109,10 +110,6 @@ body {
   color: rgb(189, 183, 175);
 
   .container-fluid {
-    width: 560px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -127,6 +124,13 @@ body {
     width: 70%;
     padding: 5px 20px 5px;
   }
+}
+
+.app-centered {
+  width: (@video-width * 2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lorem {
