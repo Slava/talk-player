@@ -1,0 +1,75 @@
+<head>
+  <title>Lightbit Library</title>
+</head>
+
+<body>
+  {{> header}}
+  {{> subheader}}
+  {{> videoPlayer}}
+  {{> lorem}}
+</body>
+
+<template name="header">
+  <header class="site-header">
+    <div class="container-fluid">
+      <nav class="navbar main-nav" role="navigation">
+        <h1 class="header-logo">LIGHTBIT
+          <span class="small">industries</span></h1>
+        <div class="navbar-wrapper">
+          <div class="navbar-nav nav">
+            <a href="#">members</a>
+            <a href="#">about</a>
+            <a href="#">people</a>
+            <a href="#">program</a>
+            <a href="#" class="active">library</a>
+            <a href="#">blog</a>
+            <a href="#"><i class="fa fa-lock"></i>&nbsp;login</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+</template>
+
+<template name="subheader">
+  <div class="sub-header">
+    <div class="container-fluid">
+      <nav class="navbar" role="navigation">
+          <div class="navbar-nav nav">
+            <a href="#"><i class="fa fa-home"></i></a>
+            <a href="#">operations</a>
+          </div>
+      </nav>
+    </div>
+  </div>
+</template>
+
+<template name="videoPlayer">
+  <div class="video-player sticky-wrapper">
+    <div class="container-fluid">
+      <div class="video-wrapper">
+        <video class="video-js vjs-default-skin" controls preload=auto width=800 height=450 poster="http://d39ojntdnamh6z.cloudfront.net/meteor-meets-cover.png" data-setup="{}">
+          <source src="http://d39ojntdnamh6z.cloudfront.net/meteor-meets-your-text-editor.mp4" type='video/mp4'/>
+        </video>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="lorem">
+  <div class="lorem">
+    {{> ipsum}}
+    {{> ipsum}}
+    {{> ipsum}}
+    {{> ipsum}}
+    {{> ipsum}}
+    {{> ipsum}}
+    {{> ipsum}}
+    {{> ipsum}}
+  </div>
+</template>
+
+<template name="ipsum">
+  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+</template>
+
