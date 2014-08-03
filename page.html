@@ -7,7 +7,7 @@
   {{> subheader}}
   {{> videoPlayer}}
   {{> speakerBio}}
-  {{> lorem}}
+  {{> techTalk}}
 </body>
 
 <template name="header">
@@ -63,15 +63,28 @@
   <div class="speaker-bio">
     <div class="container-fluid app-centered">
       <div class="clearfix">
-        <figure class="speaker-photo" style="height:200px; background-image: url('http://d3aeja1uqhkije.cloudfront.net/2013-10-15-marten-mickos/2013-10-15-marten-mickos-864x400.jpg'); background-size:cover;
+        <figure class="speaker-photo left-subpart" style="height:200px; background-image: url('http://d3aeja1uqhkije.cloudfront.net/2013-10-15-marten-mickos/2013-10-15-marten-mickos-864x400.jpg'); background-size:cover;
         background-repeat:no-repeat;">
         </figure>
-        <article class="speaker-bio-section">
+        <article class="speaker-bio-section right-subpart subpart-text">
           <h1>John Doe</h1>
           <div class="speaker-bio-text">
             {{> ipsum}}
           </div>
         </article>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="techTalk">
+  <div class="tech-talk app-centered">
+    <div class="clearfix">
+      <div class="left-subpart subpart-text">
+        {{> ipsum}}
+      </div>
+      <div class="right-subpart subpart-text">
+        {{> lorem}}
       </div>
     </div>
   </div>

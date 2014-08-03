@@ -2,6 +2,13 @@
 
 @import 'packages/less-bootstrap-3/lib/less/bootstrap.import.less';
 
+@super-dark: #242324;
+@dark: #3f3d3e;
+@medium: #464445;
+@light: #bdb7af;
+@super-light: #e8e8e8;
+@bright: #d79741;
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('fonts/glyphicons-halflings-regular.eot');
@@ -9,7 +16,7 @@
 }
 
 body {
-  background-color: #3f3d3e;
+  background-color: @dark;
 }
 
 .main-nav {
@@ -18,12 +25,12 @@ body {
 }
 
 .site-header {
-  background-color: #464445;
+  background-color: @medium;
   height: 100px;
 }
 
 .sub-header {
-  background-color: #3f3d3e;
+  background-color: @dark;
   height: 60px;
 
   .container-fluid {
@@ -45,7 +52,7 @@ body {
 }
 
 .header-logo {
-  color: #e8e8e8;
+  color: @super-light;
   width: 600px;
   display: block;
   margin-left: 20px;
@@ -67,21 +74,21 @@ body {
   a {
     font-size: 14px;
     margin-right: 25px;
-    color: #bdb7af;
+    color: @light;
     &:hover {
       text-decoration: none;
-      color: #d79741;
+      color: @bright;
     }
 
     &.active {
-      color: #d79741;
+      color: @bright;
     }
   }
 }
 
 .video-player {
   .container-fluid {
-    background-color: rgb(36, 35, 36);
+    background-color: @super-dark;
   }
 
   &.stuck {
@@ -102,27 +109,22 @@ body {
 }
 
 .speaker-bio {
-  background-color: rgb(70, 68, 69);
+  background-color: @medium;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1NUMzRDJFN0UwREExMUUzQUNGOUYyNDc3QzUyMzU5QiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1NUMzRDJFOEUwREExMUUzQUNGOUYyNDc3QzUyMzU5QiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjhCN0EzQkNBRTBEODExRTNBQ0Y5RjI0NzdDNTIzNTlCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU1QzNEMkU2RTBEQTExRTNBQ0Y5RjI0NzdDNTIzNTlCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Qv1i8gAAACVJREFUeNpiYGBgEAFihv///8MxHCBxRNAFRRiQteFWAQUAAQYA29MYTadKr1UAAAAASUVORK5CYII=);
   background-repeat: repeat;
   background-position: 0 0;
   height: 200px;
-  color: rgb(189, 183, 175);
 
   .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
   }
   .speaker-photo {
-    float: left;
-    width: 30%;
     max-height: 300px;
     overflow: hidden;
   }
   .speaker-bio-section {
-    float: right;
-    width: 70%;
-    padding: 5px 20px 5px;
+    /* n/a */
   }
 }
 
@@ -133,7 +135,26 @@ body {
   margin-right: auto;
 }
 
+.left-subpart {
+  float: left;
+  width: 30%;
+}
+
+.right-subpart {
+  float: right;
+  width: 70%;
+}
+
+.subpart-text {
+  padding: 5px 20px 5px;
+  color: @light;
+}
+
+.tech-talk {
+  margin-top: 2em;
+}
+
 .lorem {
-  color: rgb(189, 183, 175);
+  color: @light;
 }
 
