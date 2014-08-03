@@ -2,17 +2,11 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "videojs": {},
       "less-bootstrap-3": {},
       "font-awesome": {},
       "npm": {}
     },
     "packages": {
-      "videojs": {
-        "git": "https://github.com/nate-strauser/meteor-video-js.git",
-        "tag": "v4.1.2",
-        "commit": "26b85c5c75d456556bf1a1c5f00264a834813e73"
-      },
       "less-bootstrap-3": {
         "git": "https://github.com/DerMambo/less-bootstrap-3.git",
         "tag": "v0.0.2",

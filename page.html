@@ -1,5 +1,7 @@
 <head>
   <title>Lightbit Library</title>
+  <link href="//vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/4.6/video.js"></script>
 </head>
 
 <body>
@@ -52,7 +54,14 @@
       <div class="video-wrapper app-centered">
         <!-- in these two width and height are matching with base width in less -->
         <img class="video-poster" src="http://placehold.it/480x270" width=480 height=270/>
-        <video class="video-js vjs-default-skin" controls preload=auto width=480 height=270 poster="http://d39ojntdnamh6z.cloudfront.net/meteor-meets-cover.png" data-setup="{}">
+        <video id="talk-player"
+          class="video-js vjs-default-skin"
+          controls
+          preload=auto
+          width=480
+          height=270
+          poster="http://d39ojntdnamh6z.cloudfront.net/meteor-meets-cover.png"
+          data-setup="{}">
           <source src="http://d39ojntdnamh6z.cloudfront.net/meteor-meets-your-text-editor.mp4" type='video/mp4'/>
         </video>
       </div>
