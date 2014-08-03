@@ -11,7 +11,7 @@ Meteor.startup(function () {
         return parseInt(s, 10);
       });
 
-      return new Date(numbers[0] * 60 * 60 + numbers[1] * 60 + numbers[2] + numbers[3] / 1000.0);
+      return numbers[0] * 60 * 60 + numbers[1] * 60 + numbers[2] + numbers[3] / 1000.0;
     };
 
     data = _.map(data, function (d) {

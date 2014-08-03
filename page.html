@@ -10,6 +10,7 @@
   {{> techTalk}}
 </body>
 
+
 <template name="header">
   <header class="site-header">
     <div class="container-fluid">
@@ -105,6 +106,7 @@
 </template>
 
 <template name="techTalkTranscript">
+  <div class="time-mark" {{timeMarkAttr}}>{{timeMarkTS}}</div>
   <div class="inner">
     {{#each paragraphs}}
       <p class="outline-paragraph">
