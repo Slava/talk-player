@@ -1,4 +1,5 @@
 @video-width: 480px;
+@video-height: (@video-width * 9 / 16);
 
 @import 'packages/less-bootstrap-3/lib/less/bootstrap.import.less';
 
@@ -167,6 +168,12 @@ a {
   .talk-outline {
     padding-left: 10px;
     list-style: none;
+  }
+
+  & .inner.stuck {
+    position: fixed;
+    top: @video-height;
+    width: 100%;
   }
 }
 
