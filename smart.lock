@@ -4,7 +4,8 @@
     "basePackages": {
       "videojs": {},
       "less-bootstrap-3": {},
-      "font-awesome": {}
+      "font-awesome": {},
+      "npm": {}
     },
     "packages": {
       "videojs": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
         "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
       }
     }
   }

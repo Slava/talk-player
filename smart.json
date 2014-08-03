@@ -2,6 +2,7 @@
   "packages": {
     "videojs": {},
     "less-bootstrap-3": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "npm": {}
   }
 }

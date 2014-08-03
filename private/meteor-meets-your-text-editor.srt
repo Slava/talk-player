@@ -1,0 +1,294 @@
+1
+00:00:05,400 --> 00:00:09,050
+Hi! My name is Slava.
+And today I am going to talk about Meteor
+
+2
+00:00:09,050 --> 00:00:16,050
+and your text editors, where you write code.
+So, raise your hand if you use one of those:
+
+3
+00:00:16,200 --> 00:00:19,699
+Vim, Emacs or Sublime Text.
+Wow, I think it is like the whole room.
+
+4
+00:00:19,699 --> 00:00:23,269
+So, this talk is going to be helpful to you.
+I hope!
+
+5
+00:00:23,269 --> 00:00:27,029
+So, my first question is "Why you don't use
+Vim?".
+
+6
+00:00:27,029 --> 00:00:33,190
+I think Vim is the best editor, I know the
+whole MDG actually uses Emacs but I am a hardcore
+
+7
+00:00:33,190 --> 00:00:38,450
+Vim only user.
+There are actually some good reasons not to
+
+8
+00:00:38,450 --> 00:00:44,550
+use Vim for web dev. And some of them are
+like... the tool is not just good enough for
+
+9
+00:00:44,550 --> 00:00:49,230
+JavaScript. And you don't get autocompletion,
+jump to definition, all the good stuff that
+
+10
+00:00:49,230 --> 00:00:56,170
+you are used to in the Java world. Even in
+python... even python works well.
+
+11
+00:00:56,170 --> 00:01:00,360
+Actually, you know, these editors are very
+cool, they are not even editors, they are
+
+12
+00:01:00,360 --> 00:01:07,080
+called IDEs. X-code for Objective-C, Eclipse
+for Java and VS for C#. They are great and
+
+13
+00:01:07,080 --> 00:01:11,820
+companies are investing a lot of money into
+them. And that's why these tools are so great.
+
+14
+00:01:11,820 --> 00:01:18,820
+But Vim is not that bad actually, there are
+plenty of plugins those bring you cool features
+
+15
+00:01:20,640 --> 00:01:23,830
+for C++ or C# or Python.
+
+16
+00:01:23,830 --> 00:01:29,850
+So it is not really a problem of editor. Editors
+are capable of doing that.
+
+17
+00:01:29,850 --> 00:01:34,400
+I thought there should be a project for JavaScript
+that does that. That brings all these static
+
+18
+00:01:34,400 --> 00:01:39,880
+analysis [features] to your code editor.
+And actually there is one. It is called TernJS.
+
+19
+00:01:39,880 --> 00:01:46,130
+It is written by the author of ACorn and CodeMirror.
+They are very good projects. They already
+
+20
+00:01:46,130 --> 00:01:52,460
+support node.js, angular, jquery, underscore.
+And they didn't support Meteor for some reason.
+
+21
+00:01:52,460 --> 00:01:59,460
+And I thought it is a problem. I took one
+weekend off, I've seen this mailing thread
+
+22
+00:01:59,490 --> 00:02:04,090
+telling us "ok, there is this thing called
+TernJS, I think it is really cool". We should
+
+23
+00:02:04,090 --> 00:02:04,790
+use it.
+
+24
+00:02:04,790 --> 00:02:09,530
+And I thought "Yeah, we should use it" and
+I hacked in one weekend and that is what I
+
+25
+00:02:09,530 --> 00:02:09,830
+have.
+
+26
+00:02:09,830 --> 00:02:15,129
+You have smart completion based on your syntax.
+For example it knows (I don't know, is it
+
+27
+00:02:15,129 --> 00:02:18,969
+small?), it knows that it is your collection
+and it knows what are the methods on your
+
+28
+00:02:18,969 --> 00:02:19,529
+collection.
+
+29
+00:02:19,529 --> 00:02:26,529
+You can jump to definitions. I can go to some
+call to my collection and jump to the code
+
+30
+00:02:26,529 --> 00:02:29,810
+path where this collection is actually defined.
+
+31
+00:02:29,810 --> 00:02:35,730
+I can get references. Like "Find me all the
+places where I use this collection". And does
+
+32
+00:02:35,730 --> 00:02:41,669
+not just do simple search. It actually does
+some analysis on syntax tree to understand
+
+33
+00:02:41,669 --> 00:02:43,900
+what actually happens.
+
+34
+00:02:43,900 --> 00:02:50,120
+You can get docs, that I think very important
+to have docs when you have a large code base.
+
+35
+00:02:50,120 --> 00:02:54,100
+Not only docs for Meteor but also docs for
+your internal code base.
+
+36
+00:02:54,120 --> 00:03:01,120
+Type inference. It is probably hard to see
+but on the bottom there is a line changing.
+
+37
+00:03:02,169 --> 00:03:05,689
+Every time I go to a different symbol, it
+shows me what type is it. Is it an object?
+
+38
+00:03:05,689 --> 00:03:11,239
+Is it a collection? Is it like a computation?
+
+39
+00:03:11,239 --> 00:03:17,950
+And that's what works. I think it is really
+cool. We have basic features of TernJS. You
+
+40
+00:03:17,950 --> 00:03:22,639
+have autocompletion. You have file scoping
+for Meteor. It means like if you declare something
+
+41
+00:03:22,639 --> 00:03:27,529
+in one file it will not be visible in the
+second file, unless it is global and it works.
+
+42
+00:03:27,529 --> 00:03:34,529
+Also we have a lot of definitions for Meteor
+and I took it from type definitions for Typescript.
+
+43
+00:03:34,980 --> 00:03:39,489
+They are actually useful, very useful! Thanks
+to all these people who did that.
+
+44
+00:03:39,489 --> 00:03:44,449
+And we could utillize it in this project for
+JavaScript. What doesn't work.
+
+45
+00:03:44,449 --> 00:03:50,329
+Renaming refactorings don't actually work.
+Docs from docs.meteor.com don't actually work.
+
+46
+00:03:50,329 --> 00:03:54,359
+Packaging scoping doesn't work quite yet,
+I am planning to spend another weekend working
+
+47
+00:03:54,359 --> 00:04:00,370
+on that. And it would be nice if could generate
+all these definitions from Meteor, for all
+
+48
+00:04:00,370 --> 00:04:06,040
+new versions of Meteor. You know, I am not
+going to do it manually.
+
+49
+00:04:06,040 --> 00:04:13,040
+This is the link on GitHub. It is called tern-meteor.
+It is just a plugin for Tern system. And actually
+
+50
+00:04:15,019 --> 00:04:20,299
+works for all these 3 editors. Emacs, Vim
+and Sublime Text. I also have instructions
+
+51
+00:04:20,299 --> 00:04:27,299
+and video screencasts how to install them.
+People report that they actually work.
+
+52
+00:04:28,590 --> 00:04:33,860
+What is next? I want to work on those features
+those don't work. I am encouraging people
+
+53
+00:04:33,860 --> 00:04:39,949
+who want to join me? To contribute? So for
+example: you don't actually need to know how
+
+54
+00:04:39,949 --> 00:04:44,090
+to hack on, I don't know, manipulate ASTs
+and stuff like that.
+
+55
+00:04:44,090 --> 00:04:49,080
+What you can do, you can write definitions
+for your favorite packages. I just talked
+
+56
+00:04:49,080 --> 00:04:55,020
+to Bo from EventedMind. He said he is going
+to hack on it and bring definitions for IronRouter,
+
+57
+00:04:55,020 --> 00:04:55,840
+for example.
+
+58
+00:04:55,840 --> 00:05:00,830
+And you can do it for your favorite packages
+as well like Meteor.Collection2 or like Forms
+
+59
+00:05:00,830 --> 00:05:02,729
+and stuff like that.
+
+60
+00:05:02,729 --> 00:05:09,729
+That's it, please use it!
+
+61
+00:05:24,110 --> 00:05:31,110
+
+
