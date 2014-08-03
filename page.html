@@ -80,14 +80,29 @@
 <template name="techTalk">
   <div class="tech-talk app-centered">
     <div class="clearfix">
-      <div class="left-subpart subpart-text">
-        {{> ipsum}}
+      <div class="tech-talk-outline left-subpart subpart-text">
+        {{> techTalkOutline}}
       </div>
       <div class="right-subpart subpart-text">
         {{> lorem}}
       </div>
     </div>
   </div>
+</template>
+
+<template name="techTalkOutline">
+  <h1 class="talk-title">
+    Meteor Meets Your Text Editor
+  </h1>
+  <h2 class="talk-outline-title">Talk Outline</h2>
+  <ul class="talk-outline">
+    <li><a href="#">Greeting</a></li>
+    <li><a href="#">Questionaire</a></li>
+    <li><a href="#">Vim Love/Hate</a></li>
+    <li><a href="#">Introducing ternjs+Meteor</a></li>
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Closing</a></li>
+  </ul>
 </template>
 
 <template name="lorem">
