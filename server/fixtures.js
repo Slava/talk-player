@@ -21,9 +21,21 @@ Meteor.startup(function () {
       });
     });
 
+    // XXX manually computed
+    var starts = [0, 4, 10, 16, 25, 41, 48];
+    var outline = [
+      {title: "Greetings", paragraphStart: 0 },
+      {title: "Vim Love/Hate", paragraphStart: 4 },
+      {title: "TernJS + Meteor", paragraphStart: 16 },
+      {title: "Features", paragraphStart: 25 },
+      {title: "Contribute", paragraphStart: 48 }
+    ];
+
     Transcripts.insert({
       slug: slug,
-      data: data
+      data: data,
+      paragraphStarts: starts,
+      outline: outline
     });
   }
 });

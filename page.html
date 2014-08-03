@@ -84,7 +84,7 @@
         {{> techTalkOutline}}
       </div>
       <div class="right-subpart subpart-text">
-        {{> lorem}}
+        {{> techTalkTranscript}}
       </div>
     </div>
   </div>
@@ -97,14 +97,24 @@
     </h1>
     <h2 class="talk-outline-title">Talk Outline</h2>
     <ul class="talk-outline">
-      <li><a href="#">Greeting</a></li>
-      <li><a href="#">Questionaire</a></li>
-      <li><a href="#">Vim Love/Hate</a></li>
-      <li><a href="#">Introducing ternjs+Meteor</a></li>
-      <li><a href="#">Features</a></li>
-      <li><a href="#">Closing</a></li>
+      {{#each outlineParts}}
+        <li><a href="#">{{title}}</a></li>
+      {{/each}}
     </ul>
   </div>
+</template>
+
+<template name="techTalkTranscript">
+  <div class="inner">
+    {{#each paragraphs}}
+      <p class="outline-paragraph">
+        {{#each spans}}
+          <span class="outline-span">{{text}}</span>
+        {{/each}}
+      </p>
+    {{/each}}
+  </div>
+  <div class="footer"></div>
 </template>
 
 <template name="lorem">

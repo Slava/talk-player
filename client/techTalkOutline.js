@@ -5,3 +5,10 @@ Template.techTalkOutline.rendered = function () {
   });
 };
 
+Template.techTalkOutline.outlineParts = function () {
+  var transcript = Transcripts.findOne({ slug: "meteor-meets-your-text-editor" });
+  if (! transcript)
+    return;
+  return transcript.outline;
+};
+
