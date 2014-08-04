@@ -43,6 +43,25 @@ Template.techTalkTranscript.timeMarkAttr = function () {
   };
 };
 
+Template.techTalkTranscript.rendered = function () {
+  Deps.autorun(function () {
+    if (! Player.isReady()) return;
+    var cur = Player.position();
+
+    var bestTs = -1;
+    var bestOffset = 20;
+
+    _.each(ts2span, function (offset, ts) {
+      if (ts <= cur && ts > bestTs)
+        bestOffset = offset;
+    });
+
+    $('.time-mark.current').animate({
+      top: bestOffset + "px"
+    });
+  });
+};
+
 Template.techTalkTranscript.timeMarkTS = function () {
   var ts = Session.get('hovered-outline-position').ts;
   if (! ts) return "";
@@ -54,5 +73,11 @@ Template.techTalkTranscript.timeMarkTS = function () {
 
   var pad = function (x) { return x < 10 ? "0" + x : x; };
   return pad(h) + ":" + pad(m) + ":" + pad(s);
+};
+
+var ts2span = {};
+Template.techTalkTranscriptSpan.rendered = function () {
+  var self = this;
+  ts2span[self.data.startTime] = $(self.$('span')).offset().top;
 };
 

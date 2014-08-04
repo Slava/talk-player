@@ -121,16 +121,21 @@
 
 <template name="techTalkTranscript">
   <div class="time-mark" {{timeMarkAttr}}>{{timeMarkTS}}</div>
+  <div class="time-mark current"></div>
   <div class="inner">
     {{#each paragraphs}}
       <p class="outline-paragraph">
         {{#each spans}}
-          <span class="outline-span">{{text}}</span>
+          {{> techTalkTranscriptSpan}}
         {{/each}}
       </p>
     {{/each}}
   </div>
   <div class="footer"></div>
+</template>
+
+<template name="techTalkTranscriptSpan">
+  <span class="outline-span">{{text}}</span>
 </template>
 
 <template name="lorem">
