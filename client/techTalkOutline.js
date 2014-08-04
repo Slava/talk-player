@@ -10,7 +10,8 @@ Template.techTalkOutline.rendered = function () {
       $('.tech-talk-outline a').on('click', function (e) {
         // XXX hack as we can't get the data context directly
         var position = parseFloat(this.href.match(/.*#(.*)/)[1]);
-        Player && Player.setPosition(position);
+        if (Player.isReady())
+          Player.setPosition(position);
         e.preventDefault();
         return false;
       });
