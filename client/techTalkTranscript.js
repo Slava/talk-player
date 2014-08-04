@@ -28,6 +28,11 @@ Template.techTalkTranscript.events({
   },
   'mouseleave p': function (e) {
     Session.set('hovered-outline-position', { top: -100, left: -100 });
+  },
+  'click span': function (e) {
+    Player && Player.setPosition(this.startTime);
+    e.preventDefault();
+    return false;
   }
 });
 
