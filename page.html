@@ -53,7 +53,9 @@
     <div class="container-fluid">
       <div class="video-wrapper app-centered">
         <!-- in these two width and height are matching with base width in less -->
-        <img class="video-poster" src="http://placehold.it/480x270" width=480 height=270/>
+        <!-- XXX I don't know why iframes have extra whitespace around them,
+        an easy fix is to reduce the width -->
+        <iframe src="/reveal/meteor-meets-your-text-editor.html" width="476" height="270" scrolling="no" frameborder="0" seamless="seamless" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         <video id="talk-player"
           class="video-js vjs-default-skin"
           controls

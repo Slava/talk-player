@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="./css/reveal.min.css">
+		<link rel="stylesheet" href="./css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="./lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = './css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+<div class="slides">
+    <section class="" data-id="1f4eaeb8abc8846bfbde038dc31b6db4">
+        <h1>Meteor</h1>
+<h2>and</h2>
+<h1>Your Text Editor</h1>
+<div>
+        <br>
+    </div>
+<div>They can like each other. Seriously.</div>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>Slava Kim</div>
+</section>
+<section class="" data-id="47e96dc81e609e86f040a2adc4bdf032">
+    <h2>Do you use one of those?</h2>
+<h2>
+<img src="https://floobits.com/static/images/editors/emacs.png">
+    <img src="https://floobits.com/static/images/editors/vim.png">
+    <img src="http://upload.wikimedia.org/wikipedia/en/4/4c/Sublime_Text_Logo.png" style="font-size: 75.96px;">
+</h2>
+<div>
+    <br>
+    </div>
+<div>Then this talk will be useful to you!</div>
+</section>
+<section class="" data-id="1dbcd54b1f1ea397a736e3c40e5c498e">
+    <h2>
+<img src="http://treasure.diylol.com/uploads/post/image/246722/resized_y-u-no-meme-generator-y-u-no-use-vim-0f7f5d.jpg">
+    <br>
+</h2>
+</section>
+<section class="" data-id="bdc54c5c9de19a8b0039e619d1a2419c">
+    <h3>There is a good reason not to use vim in webdev</h3>
+<div>
+    <br>
+</div>
+<div>There is no sane support for your web stack</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<ul>
+<li>autocompletion</li>
+<li>jump to definition</li>
+<li>refactor a method</li>
+<li>look up docs</li>
+<li>what is the type?</li>
+</ul>
+</div>
+</section>
+<section class="" data-id="6ef45c939ae18cfd92ea957618fa7c44">
+    <h2>These guys get it</h2>
+<div>
+<img src="http://a3.mzstatic.com/us/r30/Purple4/v4/62/3b/10/623b1061-1c8b-509d-86d0-de49c54197e2/Xcode.png" style="width: 308.2355175960211px; height: 308.2355175960211px; max-height: none; max-width: none;">
+    <img src="http://wwwbruegge.informatik.tu-muenchen.de/twiki/pub/Lehrstuhl/SysiphusGoesEclipse/eclipse.png" style="width: 301.13570213301955px; height: 298.73504276221297px; max-height: none; max-width: none;">
+    <img src="http://i.stack.imgur.com/28qfO.jpg">
+</div>
+</section>
+<section class="" data-id="9bec7957b71d88592f0937a3c3363db3">
+    <h2>
+        <span>But it is not an editor problem</span>
+    </h2>
+<p>
+    <br>
+</p>
+<p>vim actually supports completion for</p>
+<p>
+</p>
+<ul>
+<li style="text-align: center; ">C/C++</li>
+<li style="text-align: center; ">Objective-C</li>
+<li style="text-align: center; ">Python</li>
+</ul>
+<p>
+</p>
+</section>
+<section class="" data-id="95f5bb953e5c9309714e84947535ee7e">
+    <h2>Tern JS</h2>
+<div>
+<img src="http://upload.wikimedia.org/wikipedia/commons/9/90/Arctic_tern_(js)_23.jpg" style="width: 437.9971293893892px; height: 282.5679012617381px; max-height: none; max-width: none;">
+    <br>
+</div>
+<div>Server written in node that analyzes your javascript<span>code and integrates with your editor. Supports node.js, underscore, jquery, es5 by default. Has bindings for Angular.</span>
+</div>
+<div>
+    <span>
+        <br>
+    </span>
+</div>
+<div>
+<span>From the author of ACorn and CodeMirror: ternjs.net</span>
+</div>
+</section>
+<section class="" data-id="d37ee5d3a75805f0274a2f1de503f9cf">
+    <h2>Now there are bindings for Meteor!</h2>
+<div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/slavakim/images/235557/Screen_Shot_2014-01-30_at_5.10.54_PM.png" style="width: 993.9459586595195px; height: 486.98670468054155px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section class="" data-id="fb35529bbcc9702c255f34b8d8e321ac">
+    <h3>Smart autocompletion based on types!</h3>
+<div style="text-align: center;">
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/slavakim/images/235589/tern-vim-completion.gif" style="width: 855.1042465748186px; height: 553.9534663139698px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section class="" data-id="17c4959df65f61e62ad1abe80b6cd5bd">
+    <h2>Jump to definition</h2>
+<div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/slavakim/images/235591/tern-vim-jump-to-def.gif" style="width: 801.9637732152042px; height: 519.5280152218521px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section class="" data-id="c6629cb4b4e802859654abf2d5c92317">
+    <h2>Get References</h2>
+<div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/slavakim/images/235596/tern-vim-refs.gif" style="width: 866.0988272699113px; height: 561.0759734364769px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section class="" data-id="db132cf8caa587be0caf3ad2178837e2">
+    <h2>Docs lookup</h2>
+<div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/slavakim/images/235566/tern-vim-doc.gif" style="width: 867.9312573857602px; height: 562.2630579568948px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section class="" data-id="2d136400fd832bcc662a8126a8a7ffd0">
+    <h2>Type inference</h2>
+<div>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/slavakim/images/235569/tern-vim-types.gif" style="width: 856.9366766906675px; height: 555.1405508343877px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section class="" data-id="66dfd9732f21d2d4b4dd954b5d3f9338">
+    <h2>What works</h2>
+<div>
+<img src="http://weknowmemes.com/wp-content/uploads/2012/02/full-of-win.jpg" style="width: 393.19353914613544px; height: 304.7483381088416px; max-height: none; max-width: none;">
+    <br>
+</div>
+<div>
+    <ul>
+<li>Base features provided by TernJS</li>
+<li>File scoping in Meteor projects</li>
+<li>Definitions for Meteor public API</li>
+<ul>
+    <li>based on `meteor.ts.d` for TypeScript</li>
+</ul>
+</ul>
+</div>
+</section>
+<section class="" data-id="668819ef701f0ec293e61914b5c82925">
+    <h2>What doesn't yet</h2>
+<div>
+    <br>
+</div>
+<div>
+<ul>
+<li>Renaming refactorings</li>
+<li>Docs from docs.meteor.com</li>
+<li>Package scoping</li>
+<li>Definitions autogen</li>
+<li>Handlebars templates parsing</li>
+</ul>
+<div style="text-align: left;">
+<br>
+</div>
+</div>
+<div style="text-align: left;">
+<br>
+</div>
+<div style="text-align: center;">... but maybe it is fixable in another weekend, who knows?</div>
+</section>
+<section class="" data-id="5c40cad8d1aff28e8eecd1a4a341b181">
+    <p>
+    <br>
+</p>
+<p>Take it, use it, contribute to it</p>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<h2>
+<a href="https://github.com/slava/tern-meteor">GitHub/Slava/Tern-Meteor</a>
+</h2>
+<div>
+<br>
+</div>
+<div>(includes text and video how-tos)</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>we can use your brain power to make it better</div>
+</section>
+</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: false,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
