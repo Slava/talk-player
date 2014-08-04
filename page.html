@@ -108,7 +108,12 @@
     <h2 class="talk-outline-title">Talk Outline</h2>
     <ul class="talk-outline">
       {{#each outlineParts}}
-        <li><a href="#">{{title}}</a></li>
+        <li>
+          <a class="outline-header"
+            href="#{{startTime}}">
+            {{title}}
+          </a>
+        </li>
       {{/each}}
     </ul>
   </div>

@@ -29,6 +29,8 @@ var getPlayer = function (player) {
       return player.currentTime();
     },
     setPosition: function (ts) {
+      if (player.pause())
+        player.play();
       player.currentTime(ts);
       dep.changed();
     }
