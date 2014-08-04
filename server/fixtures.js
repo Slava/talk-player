@@ -30,12 +30,14 @@ Meteor.startup(function () {
       {title: "Features", paragraphStart: 25 },
       {title: "Contribute", paragraphStart: 48 }
     ];
+    var slidesTimings = [0, 12, 22, 34, 55, 70, 87, 115, 125, 140, 150, 164, 173, 193, 222, 241];
 
     Transcripts.insert({
       slug: slug,
       data: data,
       paragraphStarts: starts,
-      outline: outline
+      outline: outline,
+      slidesTimings: slidesTimings
     });
   }
 });

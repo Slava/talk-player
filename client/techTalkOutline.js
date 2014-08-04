@@ -28,6 +28,8 @@ Template.techTalkOutline.outlineParts = function () {
 
 Template.techTalkOutline.startTime = function () {
   var transcript = Transcripts.findOne({ slug: "meteor-meets-your-text-editor" });
+  if (! transcript)
+    return 0;
   return transcript.data[this.paragraphStart].startTime;
 };
 

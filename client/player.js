@@ -20,6 +20,28 @@ Template.videoPlayer.rendered = function () {
     Player = getPlayer(player);
     oldPlayer.markReady();
   });
+
+  // sync slides player with the video
+  var currentSlidePlayerPos = 0;
+  Deps.autorun(function () {
+    var transcript = Transcripts.findOne();
+    if (! Player.isReady() || ! transcript)
+      return;
+    var pos = Player.position();
+    var slidesTimings = transcript.slidesTimings;
+    var slide = _.sortedIndex(slidesTimings, pos);
+    if (pos !== slidesTimings[slide])
+      slide--;
+    var Reveal = $('#slides-player')[0].contentWindow.Reveal;
+    while (slide > currentSlidePlayerPos) {
+      currentSlidePlayerPos++;
+      Reveal.next();
+    }
+    while (slide < currentSlidePlayerPos) {
+      currentSlidePlayerPos--
+      Reveal.prev();
+    }
+  });
 };
 
 var getPlayer = function (player) {
