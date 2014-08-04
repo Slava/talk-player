@@ -49,7 +49,7 @@ Template.techTalkTranscript.rendered = function () {
     var cur = Player.position();
 
     var bestTs = -1;
-    var bestOffset = 20;
+    var bestOffset = -1000;
 
     _.each(ts2span, function (offset, ts) {
       if (ts <= cur && ts > bestTs)
